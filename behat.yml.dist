@@ -1,0 +1,13 @@
+default:
+    suites:
+        default:
+            paths:
+                features: tests/Behat/Features
+            contexts:
+                - App\Tests\Behat\Context\FixturesContext
+                - App\Tests\Behat\Context\JsonContext
+                - App\Tests\Behat\Context\DbContext
+
+    extensions:
+        FriendsOfBehat\SymfonyExtension:
+            bootstrap: tests/bootstrap.php

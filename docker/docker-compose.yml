@@ -1,0 +1,14 @@
+version: '3'
+services:
+  mysql:
+    restart: "no"
+    image: mysql:8.0
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=password
+      - MYSQL_DATABASE=skeleton
+      - MYSQL_USER=skeleton
+      - MYSQL_PASSWORD=password
+    tmpfs:
+      - /var/lib/mysql/:rw

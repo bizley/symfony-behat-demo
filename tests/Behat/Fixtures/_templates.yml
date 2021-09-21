@@ -1,0 +1,3 @@
+\App\Entity\User:
+  user (template):
+    name: <firstName()> <lastName()>

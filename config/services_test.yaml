@@ -1,0 +1,13 @@
+services:
+    _defaults:
+        autowire: true
+        autoconfigure: true
+        bind:
+            $projectDir: '%kernel.project_dir%'
+
+    App\Tests\Behat\:
+        resource: '../tests/Behat/*'
+
+    App\Tests\Behat\Context\FixturesContext:
+        arguments:
+            $ORMLoader: '@fidry_alice_data_fixtures.loader.doctrine'

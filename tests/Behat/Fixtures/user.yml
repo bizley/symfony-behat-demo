@@ -1,0 +1,7 @@
+include:
+  - _templates.yml
+
+\App\Entity\User:
+  user_{1..9} (extends user): ~
+  user_10 (extends user):
+    name: 'John Doe'
